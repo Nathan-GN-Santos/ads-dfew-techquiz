@@ -1,0 +1,50 @@
+[
+  {
+    "categoria": "Inteligência Artificial",
+    "pergunta": "O que caracteriza o aprendizado de máquina?",
+    "alternativas": ["Aprender padrões a partir de dados", "Funcionar apenas sem acesso à internet", "Substituir todos os componentes físicos de um computador", "Armazenar arquivos sem realizar cálculos"],
+    "resposta": 0,
+    "explicacao": "O aprendizado de máquina é uma área da IA que utiliza dados para identificar padrões e fazer previsões ou inferências sobre novos exemplos.",
+    "fonte": "https://www.ibm.com/think/topics/machine-learning"
+  },
+  {
+    "categoria": "Inteligência Artificial",
+    "pergunta": "Qual é o principal objetivo da generalização em um modelo de aprendizado de máquina?",
+    "alternativas": ["Decorar somente os exemplos usados no treinamento", "Obter resultados úteis em dados novos", "Eliminar a necessidade de avaliar o modelo", "Garantir que qualquer previsão seja perfeita"],
+    "resposta": 1,
+    "explicacao": "Generalizar significa aplicar o que foi aprendido a exemplos novos. Um bom resultado nos dados de treinamento, sozinho, não garante bom desempenho fora deles.",
+    "fonte": "https://www.ibm.com/think/topics/machine-learning"
+  },
+  {
+    "categoria": "Inteligência Artificial",
+    "pergunta": "O deep learning está associado principalmente a qual tecnologia?",
+    "alternativas": ["Cabos de rede com maior comprimento", "Planilhas sem fórmulas", "Redes neurais artificiais com múltiplas camadas", "Páginas HTML sem conteúdo"],
+    "resposta": 2,
+    "explicacao": "Deep learning é uma área do aprendizado de máquina baseada em redes neurais profundas, capazes de aprender padrões complexos nos dados.",
+    "fonte": "https://www.ibm.com/think/topics/machine-learning"
+  },
+  {
+    "categoria": "Fundamentos da web",
+    "pergunta": "Qual é a função principal do HTML em uma página web?",
+    "alternativas": ["Proteger automaticamente todos os dados", "Treinar modelos de inteligência artificial", "Controlar a velocidade da conexão", "Definir o conteúdo e sua estrutura semântica"],
+    "resposta": 3,
+    "explicacao": "HTML organiza elementos como títulos, parágrafos e links. Uma estrutura semântica também ajuda tecnologias assistivas a interpretar o conteúdo.",
+    "fonte": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content"
+  },
+  {
+    "categoria": "Redes e comunicação",
+    "pergunta": "Para que o protocolo HTTP é utilizado na web?",
+    "alternativas": ["Trocar recursos entre clientes e servidores", "Aumentar fisicamente a memória RAM", "Substituir o sistema operacional", "Criar apenas imagens e animações"],
+    "resposta": 0,
+    "explicacao": "HTTP define a comunicação para solicitar e transferir recursos na web, como documentos HTML, imagens e outros dados.",
+    "fonte": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview"
+  },
+  {
+    "categoria": "Redes e comunicação",
+    "pergunta": "No modelo cliente-servidor da web, quem normalmente inicia uma requisição HTTP?",
+    "alternativas": ["O cabo de rede", "O cliente, como o navegador", "O monitor do computador", "O arquivo de imagem"],
+    "resposta": 1,
+    "explicacao": "O cliente, geralmente um navegador, envia uma requisição. O servidor processa a solicitação e retorna uma resposta.",
+    "fonte": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview"
+  }
+]

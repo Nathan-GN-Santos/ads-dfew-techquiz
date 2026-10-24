@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Teste seus conhecimentos sobre Inteligência Artificial e conceitos de TI em um quiz educativo.">
+  <title>TechQuiz — Conexão IA</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="CSS/style.css">
+  <script src="JS/script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#principal">Pular para o conteúdo</a>
+  <header class="header wrap">
+    <a class="brand" href="index.html" aria-label="TechQuiz, início"><span class="brand-icon">TQ<span>•</span></span> TechQuiz<span class="brand-label">CONEXÃO IA</span></a>
+    <a class="nav-link" href="#como-jogar">Como jogar <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="principal" class="wrap">
+    <section id="inicio" class="hero" aria-labelledby="titulo">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> EXPLORE. RESPONDA. EVOLUA.</p>
+        <h1 id="titulo">Conecte ideias.<br>Desafie sua<br><span>inteligência.</span></h1>
+        <p class="intro">Do aprendizado de máquina aos fundamentos da web. Descubra o quanto você sabe sobre <strong>Inteligência Artificial &amp; Conceitos de TI.</strong></p>
+        <button id="iniciar" class="primary" type="button">Iniciar desafio <span aria-hidden="true">→</span></button>
+        <p class="micro">6 perguntas <span>·</span> Sem cronômetro <span>·</span> Aprenda no seu ritmo</p>
+      </div>
+      <div class="visual" aria-hidden="true">
+        <div class="visual-top"><span>NEURAL CONNECTION / 01</span><span class="dot"></span></div>
+        <svg class="network" viewBox="0 0 440 370" fill="none">
+          <defs><radialGradient id="halo"><stop stop-color="#94f4c4" stop-opacity=".22"/><stop offset="1" stop-color="#94f4c4" stop-opacity="0"/></radialGradient></defs>
+          <circle cx="220" cy="185" r="178" fill="url(#halo)"/>
+          <g stroke="#365b51"><circle cx="220" cy="185" r="137" stroke-dasharray="4 9"/><circle cx="220" cy="185" r="90"/><path d="M80 100 220 70 356 115 350 266 220 309 88 264 80 100 220 185 356 115M220 70V185L350 266M88 264 220 185 220 309M80 100 350 266M88 264 356 115"/></g>
+          <g fill="#a4f5cc"><circle cx="80" cy="100" r="7"/><circle cx="220" cy="70" r="6"/><circle cx="356" cy="115" r="9"/><circle cx="350" cy="266" r="6"/><circle cx="220" cy="309" r="8"/><circle cx="88" cy="264" r="9"/></g>
+          <rect x="171" y="136" width="98" height="98" rx="25" fill="#a4f5cc"/>
+          <text x="220" y="199" text-anchor="middle" font-family="Arial,sans-serif" font-size="39" font-weight="700" fill="#102a24">IA</text>
+          <g fill="#bed3c9" font-family="monospace" font-size="12"><text x="20" y="80">DADOS</text><text x="318" y="94">LÓGICA</text><text x="293" y="305">CONEXÕES</text></g>
+        </svg>
+        <div class="visual-bottom"><span>Uma nova conexão a cada pergunta.</span><span class="code">&lt;/&gt;</span></div>
+      </div>
+    </section>
+    <section id="como-jogar" class="how" aria-labelledby="como-titulo">
+      <div class="section-heading"><p class="eyebrow">SEU PRÓXIMO PASSO</p><h2 id="como-titulo">Pequenos desafios. Novas descobertas.</h2></div>
+      <div class="steps">
+        <article><span class="number">01 /</span><h3>Leia e conecte</h3><p>Explore questões sobre IA, aprendizado de máquina e fundamentos da tecnologia.</p></article>
+        <article><span class="number">02 /</span><h3>Escolha sua resposta</h3><p>Uma alternativa por pergunta. Sem pressão de tempo, com espaço para pensar.</p></article>
+        <article><span class="number">03 /</span><h3>Aprenda a cada rodada</h3><p>Receba uma explicação e consulte a fonte. No final, veja seu desempenho.</p></article>
+      </div>
+    </section>
+    <section id="jogo" class="game" hidden aria-labelledby="pergunta">
+      <div class="game-top"><button id="voltar" class="text-button" type="button">← Voltar ao início</button><span id="contador"></span></div>
+      <progress id="progresso" max="6" value="0" aria-label="Perguntas respondidas"></progress>
+      <div class="question-card"><p id="categoria" class="eyebrow"></p><h2 id="pergunta" tabindex="-1"></h2><p class="hint">Escolha uma alternativa.</p><div id="alternativas" class="answers"></div>
+      <div id="feedback" class="feedback" role="status" hidden><h3 id="feedback-titulo"></h3><p id="explicacao"></p><a id="fonte" target="_blank" rel="noopener noreferrer">Consultar fonte ↗</a></div>
+      <button id="proxima" class="primary" type="button" hidden>Próxima pergunta →</button></div>
+    </section>
+    <section id="resultado" class="result" hidden aria-labelledby="resultado-titulo">
+      <p class="eyebrow">CONEXÃO CONCLUÍDA</p><h2 id="resultado-titulo" tabindex="-1">Cada descoberta conta.</h2><p id="placar" class="score"></p><p id="mensagem"></p><button id="reiniciar" class="primary" type="button">Jogar novamente ↻</button><button id="inicio-resultado" class="text-button" type="button">Voltar ao início</button>
+    </section>
+    <p id="erro" class="error" role="alert" hidden></p>
+    <noscript><p class="error">Ative o JavaScript no navegador para jogar o quiz.</p></noscript>
+  </main>
+  <footer class="wrap footer"><span>TechQuiz <span class="muted">/ Conexão IA</span></span><span>Conhecimento que conecta.</span><span class="muted">Projeto acadêmico · 2026</span></footer>
+</body>
+</html>
