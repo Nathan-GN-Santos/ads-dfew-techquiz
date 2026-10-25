@@ -1,8 +1,36 @@
-# Projeto TechQuiz
+# 🚀 TechQuiz — Inteligência Artificial & Conceitos de TI
 
-Quiz educativo sobre **Inteligência Artificial & Conceitos de TI**, desenvolvido com HTML, CSS e JavaScript puro para o projeto de Desenvolvimento Front-end para Web.
+> Projeto desenvolvido para as disciplinas do curso de **Análise e Desenvolvimento de Sistemas** do **Centro Universitário Braz Cubas**.
 
-## Funcionalidades
+> [Sobre o Projeto](#-sobre-o-projeto) | [Informações Acadêmicas](#-informações-acadêmicas) | [Links](#-links-do-projeto) | [Funcionalidades](#-funcionalidades) | [ Integrantes e Divisão de Tarefas](#-integrantes-e-divisão-de-tarefas) | [Como Executar](#-como-executar)
+---
+
+## 📌 Sobre o Projeto
+
+O **TechQuiz** é uma aplicação web interativa de perguntas sobre o tema de **Inteligência Artificial & Conceitos de TI**. O projeto foi construído com HTML5 semântico, CSS3 e JavaScript puro, priorizando boas práticas de **Design Profissional**, **Desenvolvimento Front-End** e **Acessibilidade Web (WCAG)**.
+
+---
+
+## 🎓 Informações Acadêmicas
+* **Instituição:** Centro Universitário Braz Cubas
+* **Curso:** Análise e Desenvolvimento de Sistemas (ADS)
+* **Professores Responsáveis:** 
+  * Prof. Davi de Oliveira Cruz  -  Desenvolvimento Front-End para Web
+  * Profª. Isabella Luiza dos Santos Souza - Design Profissional
+* **Entrega:** CP1 (Checkpoint 1) - Outubro de 2026
+---
+
+
+
+## 🔗 Links do Projeto
+* **Repositório oficial:** [TechQuiz](https://github.com/Nathan-GN-Santos/ads-dfew-techquiz)
+* **Site Publicado (Hospedado via GitHub Pages):** [Acesse o TechQuiz Online](https://nathan-gn-santos.github.io/ads-dfew-techquiz/)
+
+---
+
+
+
+## ✨ Funcionalidades
 
 - Página inicial com identidade visual própria e explicação de como jogar.
 - Seis questões em `perguntas.json`, com alternativas, resposta correta, explicação e fonte.
@@ -10,39 +38,32 @@ Quiz educativo sobre **Inteligência Artificial & Conceitos de TI**, desenvolvid
 - Layout responsivo, navegação por teclado, foco visível e anúncios de feedback para tecnologias assistivas.
 - Sem dependências externas, contas, coleta de dados ou serviços pagos.
 
-## Integrantes e divisão de tarefas
+---
 
-**Pendente:** preencher os nomes e usuários GitHub reais do grupo antes da entrega. Não foram fornecidos na criação do projeto.
+## 👥 Integrantes e Divisão de Tarefas
 
-| Responsabilidade sugerida | Integrante |
-| --- | --- |
-| Página inicial e conteúdo | ja ja nois separa com qm ficou |
-| Tela de jogo e interações | ja ja nois separa com qm ficou  |
-| CSS e revisão de acessibilidade | ja ja nois separa com qm ficou |
-| Questões, fontes e documentação |ja ja nois separa com qm ficou |
+| Integrante | Usuário GitHub | Responsabilidade Principal |
+| :--- | :--- | :--- |
+| **Carlos Henrique Nunes Ferreira Barbosa** | [@carlos](https://github.com/) | A decidir |
+| **José Kailon Teixeira da Silva** | [@kailon](https://github.com/) | Armazenamento |
+| **Nathan G.N. Santos** | [@Nathan-GN-Santos](https://github.com/Nathan-GN-Santos) | Qualidade, UX e Versionamento (Git Workflow) |
+| **Samuel Bispo Gama** | [@samuelsamuka716](http://github.com/samuelsamuka716) | Armazenamento e Design/CSS |
 
-Adicionar os integrantes reais em Settings > Collaborators. Cada integrante deve realizar e revisar suas próprias contribuições; este projeto inicial não representa participação individual do grupo.
+---
 
-## Executar localmente
+## 💻 Como Executar
 
-Abra a pasta no VS Code e use a extensão Live Server no `index.html`.
+Como o projeto realiza a leitura do arquivo `perguntas.json` via `fetch()`, é necessário executá-lo através de um servidor local para evitar bloqueios de CORS do navegador.
 
-Alternativamente, com Python instalado, execute dentro desta pasta:
+### Opção 1: VS Code (Recomendado)
+1. Abra a pasta do projeto no **VS Code**.
+2. Instale a extensão **Live Server**.
+3. Clique com o botão direito no arquivo `index.html` e selecione **Open with Live Server**.
 
-```sh
+### Opção 2: Servidor Python
+No terminal, dentro da pasta raiz do projeto, execute:
+ ```sh
 python -m http.server 8000
 ```
 
-Depois abra http://localhost:8000. O carregamento do JSON precisa de HTTP; abrir `index.html` diretamente por duplo clique pode bloquear o `fetch`.
 
-Temas possíveis:
-1. Web Fundamentals & Acessibildade, conectando boas práticas de US/UX, tags semânticas e acessibildade web. Contento pegadinhas educacionais.
-2. Fundamentos de Git e Trabalho em Equipe
-3. Cibersegurança & Engenharia Social (O Dia a Dia de TI)
-4. Inteligência Artificial & Conceitos de TI
-
-## Integrantes
-- [Carlos Henrique Nunes Ferreira Barbosa]()
-- [José Kailon Teixeira da Silva]()
-- [Nathan G.N. Santos](https://github.com/Nathan-GN-Santos)
-- [Samuel Bispo Gama](http://github.com/samuelsamuka716)
