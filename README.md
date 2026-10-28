@@ -44,8 +44,8 @@ O **TechQuiz** é uma aplicação web interativa de perguntas sobre o tema de **
 
 | Integrante | Usuário GitHub | Responsabilidade Principal |
 | :--- | :--- | :--- |
-| **Carlos Henrique Nunes Ferreira Barbosa** | [@carlos](https://github.com/) | A decidir |
-| **José Kailon Teixeira da Silva** | [@kailon](https://github.com/) | Armazenamento |
+| **Carlos Henrique Nunes Ferreira Barbosa** | [@carlos]([https://github.com/](https://github.com/carloshenriquenunes83-hub)) | A decidir |
+| **José Kailon Teixeira da Silva** | [@kailon](https://github.com) | Armazenamento |
 | **Nathan G.N. Santos** | [@Nathan-GN-Santos](https://github.com/Nathan-GN-Santos) | Qualidade, UX e Versionamento (Git Workflow) |
 | **Samuel Bispo Gama** | [@samuelsamuka716](http://github.com/samuelsamuka716) | Armazenamento e Design/CSS |
 
