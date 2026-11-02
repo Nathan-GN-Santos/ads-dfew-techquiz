@@ -9,6 +9,29 @@
   --font: Arial, Helvetica, sans-serif;
 }
 
+/*Botão Tema*/
+
+[data-theme="light"] {
+  --bg: #f0f5ef;
+  --panel: #e6ede3;
+  --text: #101b19;
+}
+
+/*Transição Suave*/
+
+body, 
+header, 
+footer, 
+form, 
+article, 
+div, 
+input, 
+textarea, 
+button {
+  transition: background-color 1.0s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+
 * {
   box-sizing: border-box;
 }

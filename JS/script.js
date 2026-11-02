@@ -90,3 +90,28 @@ el('proxima').addEventListener('click', () => {
     mostrar('resultado'); el('resultado-titulo').focus();
   }
 });
+
+
+// Botão de alternar tema claro/escuro
+
+const themeToggleButton = document.getElementById('botao-tema');
+const htmlElement = document.documentElement;
+
+// 1. Verifica se já existe um tema salvo no navegador ao carregar a página
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  htmlElement.setAttribute('data-theme', savedTheme);
+}
+
+// 2. EventListener do botão
+themeToggleButton.addEventListener('click', () => {
+  const currentTheme = htmlElement.getAttribute('data-theme');
+  
+  if (currentTheme === 'light') {
+    htmlElement.removeAttribute('data-theme'); // Volta para o escuro (padrão)
+    localStorage.setItem('theme', 'dark');
+  } else {
+    htmlElement.setAttribute('data-theme', 'light'); // Muda para o claro
+    localStorage.setItem('theme', 'light');
+  }
+});
