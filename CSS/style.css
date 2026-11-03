@@ -21,6 +21,9 @@
   --feedback-bg: #21392c;
   --letter-border: #63786b;
   --focus-outline: #e7c480;
+
+  /*Destaque text*/
+  --intro-strong: #d9e5dc;
 }
 
 /* Modo Claro */
@@ -28,7 +31,7 @@
   --bg: #f0f5ef;
   --panel: #e6ede3;
   --text: #101b19;
-  --line: #cdd6c9;
+  --line: #4a5d53;
 
   /* Botões quiz (Modo Claro) */
   --answer-bg: #ffffff;
@@ -43,6 +46,9 @@
   --feedback-bg: #e2f4ea;
   --letter-border: #cbd5d0;
   --focus-outline: #b8860b;
+
+   /*Destaque text*/
+  --intro-strong: #2c4a3e;
 }
 
 /* Transição Suave */
@@ -202,7 +208,7 @@ h1 span {
 
 .intro strong {
   font-weight: 400;
-  color: #d9e5dc;
+  color: var(--intro-strong);
 }
 
 .primary {
