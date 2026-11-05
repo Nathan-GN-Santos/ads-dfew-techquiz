@@ -103,6 +103,13 @@ if (savedTheme) {
   htmlElement.setAttribute('data-theme', savedTheme);
 }
 
+// Mantém o aria-checked do switch sincronizado com o tema (true = escuro, false = claro).
+// A animação visual NÃO depende do JS: ela vem do atributo data-theme + CSS.
+function atualizarSwitchTema() {
+  themeToggleButton.setAttribute('aria-checked', htmlElement.getAttribute('data-theme') === 'light' ? 'false' : 'true');
+}
+atualizarSwitchTema(); // estado correto já ao carregar a página
+
 // 2. EventListener do botão
 themeToggleButton.addEventListener('click', () => {
   const currentTheme = htmlElement.getAttribute('data-theme');
@@ -114,4 +121,6 @@ themeToggleButton.addEventListener('click', () => {
     htmlElement.setAttribute('data-theme', 'light'); // Muda para o claro
     localStorage.setItem('theme', 'light');
   }
+
+  atualizarSwitchTema(); // atualiza aria-checked após trocar
 });
