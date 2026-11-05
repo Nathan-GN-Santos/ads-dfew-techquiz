@@ -21,6 +21,18 @@
   --feedback-bg: #21392c;
   --letter-border: #63786b;
   --focus-outline: #e7c480;
+
+  /*Destaque text*/
+  --intro-strong: #d9e5dc;
+
+  /* Switch de tema (Modo Escuro = padrão): trilho azul, bolinha branca, sol azul.
+     --moon e --sun definem a cor de cada ícone; as demais definem trilho e bolinha.
+     Para mudar qualquer cor do botão, altere SOMENTE estas variáveis. */
+  --moon: #ffffff;
+  --sun: #172622;
+  --toggle-track-bg: #b5f4c8;;
+  --toggle-track-border: #b5f4c8;
+  --toggle-knob-bg: #ffffff;
 }
 
 /* Modo Claro */
@@ -28,7 +40,7 @@
   --bg: #f0f5ef;
   --panel: #e6ede3;
   --text: #101b19;
-  --line: #cdd6c9;
+  --line: #4a5d53;
 
   /* Botões quiz (Modo Claro) */
   --answer-bg: #ffffff;
@@ -43,6 +55,17 @@
   --feedback-bg: #e2f4ea;
   --letter-border: #cbd5d0;
   --focus-outline: #b8860b;
+
+   /*Destaque text*/
+  --intro-strong: #2c4a3e;
+
+  /* Switch de tema (Modo Claro): trilho vazado com borda cinza, bolinha cinza, lua branca.
+     Mesmas variáveis do :root, com valores adaptados ao tema claro. */
+  --moon: #ffffff;
+  --sun: #2f5bff;
+  --toggle-track-bg: #172622;
+  --toggle-track-border: #b7bcc7;
+  --toggle-knob-bg: #8a8f9c;
 }
 
 /* Transição Suave */
@@ -202,7 +225,7 @@ h1 span {
 
 .intro strong {
   font-weight: 400;
-  color: #d9e5dc;
+  color: var(--intro-strong);
 }
 
 .primary {
@@ -510,6 +533,110 @@ progress::-moz-progress-bar {
   top: 12px;
 }
 
+/* ===== SWITCH DE TEMA =====
+   O botão (.tema-botao) agora é só uma "casca" invisível: o visual está no
+   .tema-trilho (fundo) e na .tema-bolinha (peça que desliza).
+   Tamanhos ficam em variáveis locais para o media query mobile poder reduzir tudo de uma vez. */
+.tema-botao {
+  --trilho-w: 56px;      /* largura do trilho */
+  --trilho-h: 30px;      /* altura do trilho */
+  --bolinha: 24px;       /* diâmetro da bolinha */
+  --margem: 3px;         /* folga entre a bolinha e a borda do trilho */
+  --tempo: 0.5s;         /* duração única de todas as animações do switch */
+  /* distância que a bolinha percorre: trilho - bolinha - 2 margens - 2px de borda */
+  --curso: calc(var(--trilho-w) - var(--bolinha) - (var(--margem) * 2) - 2px);
+
+  background: none;
+  border: 0;
+  padding: 0;
+  border-radius: 999px;
+  line-height: 0;
+  flex-shrink: 0;
+}
+
+.tema-trilho {
+  position: relative;
+  display: block;
+  width: var(--trilho-w);
+  height: var(--trilho-h);
+  border-radius: 999px;
+  border: 1px solid var(--toggle-track-border);
+  background: var(--toggle-track-bg);
+  transition: background-color var(--tempo) ease, border-color var(--tempo) ease;
+}
+
+.tema-bolinha {
+  position: absolute;
+  top: 50%;
+  left: var(--margem);
+  width: var(--bolinha);
+  height: var(--bolinha);
+  border-radius: 50%;
+  background: var(--toggle-knob-bg);
+  display: grid;
+  place-items: center;
+  /* Padrão (modo escuro): bolinha à DIREITA */
+  transform: translate(var(--curso), -50%);
+  transition: transform var(--tempo) cubic-bezier(.4, 0, .2, 1), background-color var(--tempo) ease;
+}
+
+/* Modo claro: bolinha volta para a ESQUERDA. É esta regra que anima o "ir para o lado". */
+[data-theme="light"] .tema-bolinha {
+  transform: translate(0, -50%);
+}
+
+/* Os dois ícones ocupam o mesmo lugar (grid empilhado) e trocam por fade + giro */
+.tema-icone {
+  grid-area: 1 / 1;
+  width: 14px;
+  height: 14px;
+  transition: opacity var(--tempo) ease, transform var(--tempo) ease, color var(--tempo) ease;
+}
+
+.tema-lua {
+  color: var(--moon);
+  opacity: 0;                      /* escondida no modo escuro */
+  transform: rotate(-90deg) scale(.5);
+}
+
+.tema-sol {
+  color: var(--sun);
+  opacity: 1;                      /* visível no modo escuro */
+  transform: rotate(0) scale(1);
+}
+
+[data-theme="light"] .tema-lua {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+[data-theme="light"] .tema-sol {
+  opacity: 0;
+  transform: rotate(90deg) scale(.5);
+}
+
+/* Os seletores originais .theme-button:hover / :active não existiam no HTML (a classe é .tema-botao).
+   Foram corrigidos para .tema-botao e adaptados ao novo visual. */
+.tema-botao:hover .tema-bolinha {
+  filter: brightness(1.1);
+}
+
+.tema-botao:active .tema-bolinha {
+  transform: translate(var(--curso), -50%) scale(.92);
+}
+
+[data-theme="light"] .tema-botao:active .tema-bolinha {
+  transform: translate(0, -50%) scale(.92);
+}
+
+/* Respeita quem pede menos movimento no sistema operacional 
+@media (prefers-reduced-motion: reduce) {
+  .tema-trilho, .tema-bolinha, .tema-icone {
+    transition: none;
+  }
+}
+*/
+
 @media (max-width: 850px) {
   .hero {
     gap: 30px;
@@ -537,7 +664,17 @@ progress::-moz-progress-bar {
   }
   .header {
     min-height: 80px;
+    padding: 12px 16px;
+    gap: 12px;
   }
+
+  /* Mobile: o switch encolhe via variáveis (o curso é recalculado sozinho) */
+  .tema-botao {
+    --trilho-w: 50px;
+    --trilho-h: 28px;
+    --bolinha: 22px;
+  }
+
   .brand {
     font-size: 21px;
   }
