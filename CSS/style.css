@@ -542,7 +542,7 @@ progress::-moz-progress-bar {
   --trilho-h: 30px;      /* altura do trilho */
   --bolinha: 24px;       /* diâmetro da bolinha */
   --margem: 3px;         /* folga entre a bolinha e a borda do trilho */
-  --tempo: 10.5s;         /* duração única de todas as animações do switch */
+  --tempo: 0.5s;         /* duração única de todas as animações do switch */
   /* distância que a bolinha percorre: trilho - bolinha - 2 margens - 2px de borda */
   --curso: calc(var(--trilho-w) - var(--bolinha) - (var(--margem) * 2) - 2px);
 
@@ -629,12 +629,13 @@ progress::-moz-progress-bar {
   transform: translate(0, -50%) scale(.92);
 }
 
-/* Respeita quem pede menos movimento no sistema operacional */
+/* Respeita quem pede menos movimento no sistema operacional 
 @media (prefers-reduced-motion: reduce) {
   .tema-trilho, .tema-bolinha, .tema-icone {
     transition: none;
   }
 }
+*/
 
 @media (max-width: 850px) {
   .hero {
