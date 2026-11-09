@@ -1,42 +1,42 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Teste seus conhecimentos sobre Inteligência Artificial e conceitos de TI em um quiz educativo.">
+  <meta name="description"
+    content="Teste seus conhecimentos sobre Inteligência Artificial e conceitos de TI em um quiz educativo.">
   <title>TechQuiz — Conexão IA</title>
   <link rel="icon" href="IMG/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="CSS/style.css">
   <script src="JS/script.js" defer></script>
 </head>
+
 <body>
   <a class="skip" href="#principal">Pular para o conteúdo</a>
   <header class="header wrap">
-    <!--
-      BOTÃO DE TEMA (switch animado)
-      - role="switch" + aria-checked: leitores de tela anunciam "ligado/desligado".
-        O JS (script.js) mantém aria-checked sincronizado: true = modo escuro, false = modo claro.
-      - O aria-label foi mantido do código original (o botão não tem texto visível).
-      - Estrutura: button > trilho (fundo) > bolinha (move) > 2 SVGs (lua e sol).
-      - Os dois SVGs ficam SEMPRE no HTML; o CSS decide qual aparece (fade + rotação).
-      - Os SVGs usam fill="currentColor"; a cor vem das variáveis --moon e --sun (style.css, :root).
-      - width/height="16" dos SVGs originais foram mantidos; o tamanho final é controlado no CSS.
-    -->
-    <button id="botao-tema" class="tema-botao" type="button" role="switch" aria-checked="true" aria-label="Alternar entre modo claro e escuro">
+
+    <button id="botao-tema" class="tema-botao" type="button" role="switch" aria-checked="true"
+      aria-label="Alternar entre modo claro e escuro">
       <span class="tema-trilho" aria-hidden="true">
         <span class="tema-bolinha">
           <!-- Ícone da LUA: visível no modo claro (bolinha à esquerda) -->
-          <svg class="tema-icone tema-lua" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
-            <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
+          <svg class="tema-icone tema-lua" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-moon" viewBox="0 0 16 16">
+            <path
+              d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286" />
           </svg>
           <!-- Ícone do SOL: visível no modo escuro (bolinha à direita) -->
-          <svg class="tema-icone tema-sol" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun" viewBox="0 0 16 16">
-            <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+          <svg class="tema-icone tema-sol" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-sun" viewBox="0 0 16 16">
+            <path
+              d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
           </svg>
         </span>
       </span>
     </button>
-    <a class="brand" href="index.html" aria-label="TechQuiz, início"><span class="brand-icon">TQ</span> TechQuiz<span class="brand-label">CONEXÃO IA</span></a>
+    <a class="brand" href="index.html" aria-label="TechQuiz, início"><span class="brand-icon">TQ</span> TechQuiz<span
+        class="brand-label">CONEXÃO IA</span></a>
     <a class="nav-link" href="#como-jogar">Como jogar <span aria-hidden="true">↗</span></a>
   </header>
   <main id="principal" class="wrap">
@@ -44,45 +44,119 @@
       <div class="hero-copy">
         <p class="eyebrow"><span class="dot"></span> EXPLORE. RESPONDA. EVOLUA.</p>
         <h1 id="titulo">Conecte ideias.<br>Desafie sua<br><span>inteligência.</span></h1>
-        <p class="intro">Do aprendizado de máquina aos fundamentos da web. Descubra o quanto você sabe sobre <strong>Inteligência Artificial &amp; Conceitos de TI.</strong></p>
+        <p class="intro">Do aprendizado de máquina aos fundamentos da web. Descubra o quanto você sabe sobre
+          <strong>Inteligência Artificial &amp; Conceitos de TI.</strong></p>
+
+        <!-- Campo do nome  -->
+        <div style="margin-bottom: 15px; width: 100%; max-width: 320px;">
+          <label for="nome-jogador" style="display: block; margin-bottom: 5px; font-size: 0.9rem; font-weight: 500;">Seu
+            Nome:</label>
+          <input type="text" id="nome-jogador" placeholder="Digite seu nome..."
+            style="padding: 12px 16px; width: 100%; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: inherit; font-size: 1rem;"
+            maxlength="20" autocomplete="off" aria-describedby="erro-nome" required>
+          <p id="erro-nome" class="erro-nome" role="alert" hidden></p>
+          <div id="jogadores-salvos" class="jogadores-salvos" hidden>
+            <p id="jogadores-titulo" class="hint">Ou escolha um jogador desta sessão:</p>
+            <div id="jogadores-lista" class="chips" role="group" aria-labelledby="jogadores-titulo"></div>
+          </div>
+        </div>
+
         <button id="iniciar" class="primary" type="button">Iniciar desafio <span aria-hidden="true">→</span></button>
         <p class="micro">6 perguntas <span>·</span> Sem cronômetro <span>·</span> Aprenda no seu ritmo</p>
       </div>
       <div class="visual" aria-hidden="true">
         <div class="visual-top"><span>NEURAL CONNECTION / 01</span><span class="dot"></span></div>
         <svg class="network" viewBox="0 0 440 370" fill="none">
-          <defs><radialGradient id="halo"><stop stop-color="#94f4c4" stop-opacity=".22"/><stop offset="1" stop-color="#94f4c4" stop-opacity="0"/></radialGradient></defs>
-          <circle cx="220" cy="185" r="178" fill="url(#halo)"/>
-          <g stroke="#365b51"><circle cx="220" cy="185" r="137" stroke-dasharray="4 9"/><circle cx="220" cy="185" r="90"/><path d="M80 100 220 70 356 115 350 266 220 309 88 264 80 100 220 185 356 115M220 70V185L350 266M88 264 220 185 220 309M80 100 350 266M88 264 356 115"/></g>
-          <g fill="#a4f5cc"><circle cx="80" cy="100" r="7"/><circle cx="220" cy="70" r="6"/><circle cx="356" cy="115" r="9"/><circle cx="350" cy="266" r="6"/><circle cx="220" cy="309" r="8"/><circle cx="88" cy="264" r="9"/></g>
-          <rect x="171" y="136" width="98" height="98" rx="25" fill="#a4f5cc"/>
-          <text x="220" y="199" text-anchor="middle" font-family="Arial,sans-serif" font-size="39" font-weight="700" fill="#102a24">IA</text>
-          <g fill="#bed3c9" font-family="monospace" font-size="12"><text x="20" y="80">DADOS</text><text x="318" y="94">LÓGICA</text><text x="293" y="305">CONEXÕES</text></g>
+          <defs>
+            <radialGradient id="halo">
+              <stop stop-color="#94f4c4" stop-opacity=".22" />
+              <stop offset="1" stop-color="#94f4c4" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+          <circle cx="220" cy="185" r="178" fill="url(#halo)" />
+          <g stroke="#365b51">
+            <circle cx="220" cy="185" r="137" stroke-dasharray="4 9" />
+            <circle cx="220" cy="185" r="90" />
+            <path
+              d="M80 100 220 70 356 115 350 266 220 309 88 264 80 100 220 185 356 115M220 70V185L350 266M88 264 220 185 220 309M80 100 350 266M88 264 356 115" />
+          </g>
+          <g fill="#a4f5cc">
+            <circle cx="80" cy="100" r="7" />
+            <circle cx="220" cy="70" r="6" />
+            <circle cx="356" cy="115" r="9" />
+            <circle cx="350" cy="266" r="6" />
+            <circle cx="220" cy="309" r="8" />
+            <circle cx="88" cy="264" r="9" />
+          </g>
+          <rect x="171" y="136" width="98" height="98" rx="25" fill="#a4f5cc" />
+          <text x="220" y="199" text-anchor="middle" font-family="Arial,sans-serif" font-size="39" font-weight="700"
+            fill="#102a24">IA</text>
+          <g fill="#bed3c9" font-family="monospace" font-size="12"><text x="20" y="80">DADOS</text><text x="318"
+              y="94">LÓGICA</text><text x="293" y="305">CONEXÕES</text></g>
         </svg>
-        <div class="visual-bottom"><span>Uma nova conexão a cada pergunta.</span><span class="code">&lt;/&gt;</span></div>
+        <div class="visual-bottom"><span>Uma nova conexão a cada pergunta.</span><span class="code">&lt;/&gt;</span>
+        </div>
       </div>
     </section>
     <section id="como-jogar" class="how" aria-labelledby="como-titulo">
-      <div class="section-heading"><p class="eyebrow">SEU PRÓXIMO PASSO</p><h2 id="como-titulo">Pequenos desafios. Novas descobertas.</h2></div>
+      <div class="section-heading">
+        <p class="eyebrow">SEU PRÓXIMO PASSO</p>
+        <h2 id="como-titulo">Pequenos desafios. Novas descobertas.</h2>
+      </div>
       <div class="steps">
-        <article><span class="number">01 /</span><h3>Leia e conecte</h3><p>Explore questões sobre IA, aprendizado de máquina e fundamentos da tecnologia.</p></article>
-        <article><span class="number">02 /</span><h3>Escolha sua resposta</h3><p>Uma alternativa por pergunta. Sem pressão de tempo, com espaço para pensar.</p></article>
-        <article><span class="number">03 /</span><h3>Aprenda a cada rodada</h3><p>Receba uma explicação e consulte a fonte. No final, veja seu desempenho.</p></article>
+        <article><span class="number">01 /</span>
+          <h3>Leia e conecte</h3>
+          <p>Explore questões sobre IA, aprendizado de máquina e fundamentos da tecnologia.</p>
+        </article>
+        <article><span class="number">02 /</span>
+          <h3>Escolha sua resposta</h3>
+          <p>Uma alternativa por pergunta. Sem pressão de tempo, com espaço para pensar.</p>
+        </article>
+        <article><span class="number">03 /</span>
+          <h3>Aprenda a cada rodada</h3>
+          <p>Receba uma explicação e consulte a fonte. No final, veja seu desempenho.</p>
+        </article>
       </div>
     </section>
     <section id="jogo" class="game" hidden aria-labelledby="pergunta">
-      <div class="game-top"><button id="voltar" class="text-button" type="button">← Voltar ao início</button><span id="contador"></span></div>
+      <div class="game-top"><button id="voltar" class="text-button" type="button">← Voltar ao início</button><span
+          id="contador"></span></div>
       <progress id="progresso" max="6" value="0" aria-label="Perguntas respondidas"></progress>
-      <div class="question-card"><p id="categoria" class="eyebrow"></p><h2 id="pergunta" tabindex="-1"></h2><p class="hint">Escolha uma alternativa.</p><div id="alternativas" class="answers"></div>
-      <div id="feedback" class="feedback" role="status" hidden><h3 id="feedback-titulo"></h3><p id="explicacao"></p><a id="fonte" target="_blank" rel="noopener noreferrer">Consultar fonte ↗</a></div>
-      <button id="proxima" class="primary" type="button" hidden>Próxima pergunta →</button></div>
+      <div class="question-card">
+        <p id="categoria" class="eyebrow"></p>
+        <h2 id="pergunta" tabindex="-1"></h2>
+        <p class="hint">Escolha uma alternativa.</p>
+        <div id="alternativas" class="answers"></div>
+        <div id="feedback" class="feedback" role="status" hidden>
+          <h3 id="feedback-titulo"></h3>
+          <p id="explicacao"></p><a id="fonte" target="_blank" rel="noopener noreferrer">Consultar fonte ↗</a>
+        </div>
+        <button id="proxima" class="primary" type="button" hidden>Próxima pergunta →</button>
+      </div>
     </section>
+
+    <!-- Seção de resultado -->
     <section id="resultado" class="result" hidden aria-labelledby="resultado-titulo">
-      <p class="eyebrow">CONEXÃO CONCLUÍDA</p><h2 id="resultado-titulo" tabindex="-1">Cada descoberta conta.</h2><p id="placar" class="score"></p><p id="mensagem"></p><button id="reiniciar" class="primary" type="button">Jogar novamente ↻</button><button id="inicio-resultado" class="text-button" type="button">Voltar ao início</button>
+      <p class="eyebrow">CONEXÃO CONCLUÍDA</p>
+      <h2 id="resultado-titulo" tabindex="-1">Cada descoberta conta.</h2>
+      <p id="placar" class="score"></p>
+      <p id="mensagem"></p>
+      <div class="ranking" aria-labelledby="ranking-titulo">
+        <h3 id="ranking-titulo">Ranking da sessão</h3>
+        <p id="evolucao" class="hint"></p>
+        <ol id="ranking-lista" class="ranking-lista"></ol>
+      </div>
+      <button id="outro-jogador" class="text-button" type="button">Outro jogador</button>
+      <button id="reiniciar" class="primary" type="button">Jogar novamente ↻</button>
+      <button id="inicio-resultado" class="text-button" type="button">Voltar ao início</button>
     </section>
     <p id="erro" class="error" role="alert" hidden></p>
-    <noscript><p class="error">Ative o JavaScript no navegador para jogar o quiz.</p></noscript>
+    <noscript>
+      <p class="error">Ative o JavaScript no navegador para jogar o quiz.</p>
+    </noscript>
   </main>
-  <footer class="wrap footer"><span>TechQuiz <span class="muted">/ Conexão IA</span></span><span>Conhecimento que conecta.</span><span class="muted">Projeto acadêmico · 2026</span></footer>
+  <footer class="wrap footer"><span>TechQuiz <span class="muted">/ Conexão IA</span></span><span>Conhecimento que
+      conecta.</span><span class="muted">Projeto acadêmico · 2026</span></footer>
 </body>
+
 </html>
