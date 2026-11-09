@@ -629,13 +629,115 @@ progress::-moz-progress-bar {
   transform: translate(0, -50%) scale(.92);
 }
 
-/* Respeita quem pede menos movimento no sistema operacional 
+/* Respeita quem pede menos movimento no sistema operacional */
 @media (prefers-reduced-motion: reduce) {
   .tema-trilho, .tema-bolinha, .tema-icone {
     transition: none;
   }
 }
-*/
+
+
+/* ===== NOME DO JOGADOR, HISTÓRICO E RANKING =====
+   Mensagem de erro do campo de nome: fundo e borda de erro + texto + ícone ⚠ . */
+.erro-nome {
+  margin: 8px 0 0;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: var(--text);
+  background: var(--wrong-bg);
+  border-left: 3px solid var(--wrong-border);
+  border-radius: 4px;
+}
+
+/* Lista de nomes já usados na sessão  */
+.jogadores-salvos {
+  margin-top: 12px;
+}
+
+.jogadores-salvos .hint {
+  margin: 0 0 8px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  background: var(--answer-bg);
+  border: 1px solid var(--answer-border);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 14px;
+}
+
+.chip:hover {
+  border-color: var(--green);
+  background: var(--answer-hover);
+}
+
+/* Chip selecionado: além da cor, ganha um "✓" */
+.chip[aria-pressed="true"] {
+  border-color: var(--text);
+  background: var(--answer-hover);
+  font-weight: 700;
+}
+
+.chip[aria-pressed="true"]::before {
+  content: "✓ ";
+}
+
+/* Ranking da tela de resultado */
+.ranking {
+  margin: 32px auto 8px;
+  max-width: 460px;
+  text-align: left;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+
+.ranking h3 {
+  margin-top: 0;
+}
+
+.ranking .hint {
+  margin: 0;
+}
+
+.ranking-lista {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.ranking-lista li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border: 1px solid var(--answer-border);
+  border-radius: 8px;
+  background: var(--answer-bg);
+  font-size: 15px;
+}
+
+/* Partida atual: destaque por cor + negrito + o texto "esta partida" */
+.ranking-lista li.atual {
+  border-color: var(--correct-border);
+  background: var(--correct-bg);
+  font-weight: 700;
+}
+
+.result .text-button {
+  margin: 0 12px;
+}
+
 
 @media (max-width: 850px) {
   .hero {
