@@ -859,3 +859,10 @@ progress::-moz-progress-bar {
   outline: none;
   border-color: var(--green);
 }
+
+.label-jogador {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
