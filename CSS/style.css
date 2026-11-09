@@ -157,7 +157,7 @@ input:focus-visible,
 
 .brand-icon {
   background: var(--green);
-  color: var(--bg);
+  color: #13251c;
   border-radius: 12px;
   font-size: 17px;
   padding: 6px 10px;
@@ -185,7 +185,7 @@ input:focus-visible,
 
 .nav-link span {
   margin-left: 20px;
-  color: var(--green);
+  color: var(--accent);
 }
 
 .hero {
