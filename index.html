@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <a class="skip" href="#principal">Pular para o conteúdo</a>
+
   <header class="header wrap">
 
     <button id="botao-tema" class="tema-botao" type="button" role="switch" aria-checked="true"
@@ -51,9 +51,7 @@
         <div style="margin-bottom: 15px; width: 100%; max-width: 320px;">
           <label for="nome-jogador" style="display: block; margin-bottom: 5px; font-size: 0.9rem; font-weight: 500;">Seu
             Nome:</label>
-          <input type="text" id="nome-jogador" placeholder="Digite seu nome..."
-            style="padding: 12px 16px; width: 100%; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: inherit; font-size: 1rem;"
-            maxlength="20" autocomplete="off" aria-describedby="erro-nome" required>
+          <input type="text" id="nome-jogador" class="input-jogador" placeholder="Digite seu nome..." maxlength="20" autocomplete="off" aria-describedby="erro-nome" required>
           <p id="erro-nome" class="erro-nome" role="alert" hidden></p>
           <div id="jogadores-salvos" class="jogadores-salvos" hidden>
             <p id="jogadores-titulo" class="hint">Ou escolha um jogador desta sessão:</p>
@@ -62,7 +60,7 @@
         </div>
 
         <button id="iniciar" class="primary" type="button">Iniciar desafio <span aria-hidden="true">→</span></button>
-        <p class="micro">6 perguntas <span>·</span> Sem cronômetro <span>·</span> Aprenda no seu ritmo</p>
+        <p class="micro">6 perguntas <span>·</span> Sem cronômetro <span>
       </div>
       <div class="visual" aria-hidden="true">
         <div class="visual-top"><span>NEURAL CONNECTION / 01</span><span class="dot"></span></div>
@@ -100,8 +98,8 @@
     </section>
     <section id="como-jogar" class="how" aria-labelledby="como-titulo">
       <div class="section-heading">
-        <p class="eyebrow">SEU PRÓXIMO PASSO</p>
-        <h2 id="como-titulo">Pequenos desafios. Novas descobertas.</h2>
+        <p class="eyebrow">COMO JOGAR</p>
+       <!-- <h2 id="como-titulo">Pequenos desafios e novas descobertas.</h2>-->
       </div>
       <div class="steps">
         <article><span class="number">01 /</span>
