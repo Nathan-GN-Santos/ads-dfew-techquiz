@@ -37,6 +37,14 @@ function renderizar() {
   el('pergunta').focus();
 }
 
+// Acrescenta um rótulo de texto (além da cor) dentro do botão de resposta
+function marcarResposta(botao, texto) {
+  const marca = document.createElement('span');
+  marca.className = 'marca';
+  marca.textContent = texto;
+  botao.children[1].append(marca);
+}
+
 function responder(escolha) {
   if (respondeu) return;
   respondeu = true;
@@ -45,14 +53,15 @@ function responder(escolha) {
   if (correta) acertos++;
   [...el('alternativas').children].forEach((botao, i) => {
     botao.disabled = true;
-    if (i === item.resposta) botao.classList.add('correct');
-    else if (i === escolha) botao.classList.add('wrong');
+    if (i === item.resposta) { botao.classList.add('correct'); marcarResposta(botao, '✓ Resposta correta'); }
+    else if (i === escolha) { botao.classList.add('wrong'); marcarResposta(botao, '✗ Resposta incorreta'); }
   });
-  el('feedback-titulo').textContent = correta ? '✓ Resposta correta!' : 'Vamos aprender com essa!';
+  el('feedback-titulo').textContent = correta ? '✓ Resposta correta!' : `✗ Incorreta — a resposta certa era ${String.fromCharCode(65 + item.resposta)}.`;
   el('explicacao').textContent = `${correta ? '' : `Resposta correta: ${item.alternativas[item.resposta]}. `}${item.explicacao}`;
   el('fonte').href = item.fonte;
   el('feedback').classList.toggle('incorrect', !correta);
   el('feedback').hidden = false;
+  el('feedback-titulo').focus();
   el('progresso').value = indice + 1;
   el('proxima').textContent = indice === perguntas.length - 1 ? 'Ver resultado →' : 'Próxima pergunta →';
   el('proxima').hidden = false;
