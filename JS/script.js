@@ -131,10 +131,10 @@ themeToggleButton.addEventListener('click', () => {
   
   if (currentTheme === 'light') {
     htmlElement.removeAttribute('data-theme'); // Volta para o escuro (padrão)
-    localStorage.setItem('theme', 'dark');
+    salvarTema('dark');
   } else {
     htmlElement.setAttribute('data-theme', 'light'); // Muda para o claro
-    localStorage.setItem('theme', 'light');
+    salvarTema('light');
   }
 
   atualizarSwitchTema(); // atualiza aria-checked após trocar
