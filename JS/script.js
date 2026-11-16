@@ -109,7 +109,8 @@ const themeToggleButton = document.getElementById('botao-tema');
 const htmlElement = document.documentElement;
 
 // 1. Verifica se já existe um tema salvo no navegador ao carregar a página
-const savedTheme = localStorage.getItem('theme');
+let savedTheme = null;
+try { savedTheme = localStorage.getItem('theme'); } catch { /* armazenamento bloqueado: segue com o tema padrão escuro */ }
 if (savedTheme) {
   htmlElement.setAttribute('data-theme', savedTheme);
 }
@@ -120,6 +121,9 @@ function atualizarSwitchTema() {
   themeToggleButton.setAttribute('aria-checked', htmlElement.getAttribute('data-theme') === 'light' ? 'false' : 'true');
 }
 atualizarSwitchTema(); // estado correto já ao carregar a página
+function salvarTema(tema) {
+  try { localStorage.setItem('theme', tema); } catch { /* armazenamento bloqueado: ignora */ }
+}
 
 // 2. EventListener do botão
 themeToggleButton.addEventListener('click', () => {
