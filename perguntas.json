@@ -1,50 +1,158 @@
 [
   {
     "categoria": "Inteligência Artificial",
-    "pergunta": "O que caracteriza o aprendizado de máquina?",
-    "alternativas": ["Aprender padrões a partir de dados", "Funcionar apenas sem acesso à internet", "Substituir todos os componentes físicos de um computador", "Armazenar arquivos sem realizar cálculos"],
+    "pergunta": "O que caracteriza o fenômeno de overfitting (sobreajuste) em um modelo de IA?",
+    "alternativas": [
+      "O modelo apresenta bons resultados apenas em dados desconhecidos.",
+      "O modelo é simples demais para identificar padrões.",
+      "O modelo tem bom desempenho no treino, mas falha em dados novos.",
+      "O modelo demora mais tempo para concluir o treinamento."
+    ],
+    "resposta": 2,
+    "explicacao": "O overfitting ocorre quando o modelo decora excessivamente os dados de treinamento (incluindo ruídos), falhando ao tentar prever dados novos e invisíveis.",
+    "fonte": "https://www.ibm.com/think/topics/overfitting"
+  },
+  {
+    "categoria": "Inteligência Artificial",
+    "pergunta": "O que o Processamento de Linguagem Natural (PLN ou NLP) busca permitir que os computadores façam?",
+    "alternativas": [
+      "Organizar arquivos e pastas automaticamente.",
+      "Interpretar e produzir linguagem humana.",
+      "Gerenciar conexões entre dispositivos de rede.",
+      "Formatar documentos e corrigir sua aparência."
+    ],
+    "resposta": 1,
+    "explicacao": "O PLN é um subcampo da IA focado na interação entre computadores e humanos por meio da linguagem natural, abrangendo tradução, análise de sentimentos e chatbots.",
+    "fonte": "https://www.ibm.com/think/topics/natural-language-processing"
+  },
+  {
+    "categoria": "Inteligência Artificial",
+    "pergunta": "Qual é a principal diferença entre aprendizado supervisionado e não supervisionado?",
+    "alternativas": [
+      "Um utiliza dados rotulados, enquanto o outro identifica padrões sem rótulos.",
+      "Um funciona com textos, enquanto o outro trabalha apenas com imagens.",
+      "Um depende de internet, enquanto o outro funciona totalmente offline.",
+      "Um exige intervenção humana constante, enquanto o outro não utiliza dados."
+    ],
     "resposta": 0,
+    "explicacao": "No aprendizado supervisionado, o modelo é treinado com dados que contêm a resposta correta (rótulos). No não supervisionado, o algoritmo explora dados não rotulados para encontrar estruturas ocultas.",
+    "fonte": "https://www.ibm.com/think/topics/supervised-learning"
+  },
+  {
+    "categoria": "Inteligência Artificial",
+    "pergunta": "O que representa o conceito de viés algorítmico em sistemas de inteligência artificial?",
+    "alternativas": [
+      "Uma falha na comunicação entre processadores.",
+      "Uma técnica para reduzir o consumo de memória.",
+      "A incapacidade de processar grandes volumes de dados.",
+      "A reprodução de desigualdades presentes nos dados ou no projeto do sistema."
+    ],
+    "resposta": 3,
+    "explicacao": "O viés algorítmico ocorre quando os sistemas geram resultados discriminatórios ou injustos devido a dados de treinamento desequilibrados ou premissas tendenciosas.",
+    "fonte": "https://www.ibm.com/think/topics/ai-ethics"
+  },
+  {
+    "categoria": "Inteligência Artificial",
+    "pergunta": "O que caracteriza a arquitetura de Transformadores (Transformers) em inteligência artificial?",
+    "alternativas": [
+      "O processamento exclusivo de imagens estáticas.",
+      "O uso de mecanismos de atenção para relacionar partes dos dados.",
+      "A eliminação de bancos de dados durante as consultas.",
+      "A utilização de processadores analógicos para cálculos."
+    ],
+    "resposta": 1,
+    "explicacao": "A arquitetura de transformadores revolucionou o processamento de linguagem natural e IA generativa graças ao mecanismo de atenção, que avalia a importância de diferentes partes de uma entrada de dados.",
+    "fonte": "https://www.ibm.com/think/topics/artificial-intelligence"
+  },
+  {
+    "categoria": "Inteligência Artificial",
+    "pergunta": "Qual é o objetivo principal da visão computacional dentro da inteligência artificial?",
+    "alternativas": [
+      "Interpretar informações presentes em imagens e vídeos.",
+      "Aprimorar a velocidade de conexão com a internet.",
+      "Controlar a temperatura dos componentes físicos.",
+      "Criar elementos visuais para páginas e documentos."
+    ],
+    "resposta": 0,
+    "explicacao": "A visão computacional treina computadores para interpretar e compreender o mundo visual, utilizando imagens e vídeos para tarefas como reconhecimento facial e detecção de objetos.",
+    "fonte": "https://www.ibm.com/think/topics/computer-vision"
+  },
+  {
+    "categoria": "Inteligência Artificial",
+    "pergunta": "O que é o aprendizado por reforço (reinforcement learning)?",
+    "alternativas": [
+      "Um método de classificação baseado em dados rotulados.",
+      "Uma técnica para compactar arquivos automaticamente.",
+      "Um método em que um agente aprende por recompensas e penalidades.",
+      "Um sistema que transforma documentos em formatos digitais."
+    ],
+    "resposta": 2,
+    "explicacao": "O aprendizado por reforço é um tipo de aprendizado de máquina em que um agente autônomo aprende a alcançar um objetivo complexo interagindo com um ambiente.",
+    "fonte": "https://www.ibm.com/think/topics/artificial-intelligence"
+  },
+  {
+    "categoria": "Inteligência Artificial",
+    "pergunta": "O que caracteriza o aprendizado de máquina?",
+    "alternativas": [
+      "Executar tarefas sem precisar de algoritmos.",
+      "Armazenar informações sem processá-las.",
+      "Depender exclusivamente de conexões externas.",
+      "Identificar padrões e relações a partir de dados."
+    ],
+    "resposta": 3,
     "explicacao": "O aprendizado de máquina é uma área da IA que utiliza dados para identificar padrões e fazer previsões ou inferências sobre novos exemplos.",
     "fonte": "https://www.ibm.com/think/topics/machine-learning"
   },
   {
     "categoria": "Inteligência Artificial",
     "pergunta": "Qual é o principal objetivo da generalização em um modelo de aprendizado de máquina?",
-    "alternativas": ["Decorar somente os exemplos usados no treinamento", "Obter resultados úteis em dados novos", "Eliminar a necessidade de avaliar o modelo", "Garantir que qualquer previsão seja perfeita"],
+    "alternativas": [
+      "Reduzir a quantidade de dados armazenados.",
+      "Aplicar o conhecimento aprendido a novos exemplos.",
+      "Memorizar todas as informações do treinamento.",
+      "Eliminar a necessidade de testar o modelo."
+    ],
     "resposta": 1,
     "explicacao": "Generalizar significa aplicar o que foi aprendido a exemplos novos. Um bom resultado nos dados de treinamento, sozinho, não garante bom desempenho fora deles.",
     "fonte": "https://www.ibm.com/think/topics/machine-learning"
   },
   {
     "categoria": "Inteligência Artificial",
+    "pergunta": "Qual é o objetivo de uma função de ativação em uma rede neural artificial?",
+    "alternativas": [
+      "Introduzir não-linearidade para aprender relações complexas.",
+      "Aumentar a capacidade de armazenamento do computador.",
+      "Estabelecer conexões físicas com outros dispositivos.",
+      "Converter instruções para linguagem de máquina."
+    ],
+    "resposta": 0,
+    "explicacao": "As funções de ativação determinam se o neurônio deve ser ativado ou não, inserindo não-linearidades essenciais para resolver problemas complexos.",
+    "fonte": "https://www.ibm.com/think/topics/neural-networks"
+  },
+  {
+    "categoria": "Inteligência Artificial",
     "pergunta": "O deep learning está associado principalmente a qual tecnologia?",
-    "alternativas": ["Cabos de rede com maior comprimento", "Planilhas sem fórmulas", "Redes neurais artificiais com múltiplas camadas", "Páginas HTML sem conteúdo"],
-    "resposta": 2,
+    "alternativas": [
+      "Sistemas de armazenamento distribuído.",
+      "Redes neurais artificiais com várias camadas.",
+      "Planilhas com cálculos automatizados.",
+      "Conexões de rede de alta velocidade."
+    ],
+    "resposta": 1,
     "explicacao": "Deep learning é uma área do aprendizado de máquina baseada em redes neurais profundas, capazes de aprender padrões complexos nos dados.",
     "fonte": "https://www.ibm.com/think/topics/machine-learning"
   },
   {
-    "categoria": "Fundamentos da web",
-    "pergunta": "Qual é a função principal do HTML em uma página web?",
-    "alternativas": ["Proteger automaticamente todos os dados", "Treinar modelos de inteligência artificial", "Controlar a velocidade da conexão", "Definir o conteúdo e sua estrutura semântica"],
+    "categoria": "Inteligência Artificial",
+    "pergunta": "O que são os Modelos de Linguagem de Grande Escala (LLMs - Large Language Models)?",
+    "alternativas": [
+      "Sistemas responsáveis por criptografar bancos de dados.",
+      "Programas destinados à compactação de arquivos.",
+      "Ferramentas para medir a velocidade de redes.",
+      "Modelos treinados com grandes volumes de texto para processar e gerar linguagem."
+    ],
     "resposta": 3,
-    "explicacao": "HTML organiza elementos como títulos, parágrafos e links. Uma estrutura semântica também ajuda tecnologias assistivas a interpretar o conteúdo.",
-    "fonte": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content"
-  },
-  {
-    "categoria": "Redes e comunicação",
-    "pergunta": "Para que o protocolo HTTP é utilizado na web?",
-    "alternativas": ["Trocar recursos entre clientes e servidores", "Aumentar fisicamente a memória RAM", "Substituir o sistema operacional", "Criar apenas imagens e animações"],
-    "resposta": 0,
-    "explicacao": "HTTP define a comunicação para solicitar e transferir recursos na web, como documentos HTML, imagens e outros dados.",
-    "fonte": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview"
-  },
-  {
-    "categoria": "Redes e comunicação",
-    "pergunta": "No modelo cliente-servidor da web, quem normalmente inicia uma requisição HTTP?",
-    "alternativas": ["O cabo de rede", "O cliente, como o navegador", "O monitor do computador", "O arquivo de imagem"],
-    "resposta": 1,
-    "explicacao": "O cliente, geralmente um navegador, envia uma requisição. O servidor processa a solicitação e retorna uma resposta.",
-    "fonte": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview"
+    "explicacao": "Os LLMs utilizam redes neurais profundas para processar e gerar texto com base em contextos complexos de linguagem natural.",
+    "fonte": "https://www.ibm.com/think/topics/artificial-intelligence"
   }
 ]
