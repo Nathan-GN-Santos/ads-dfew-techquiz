@@ -33,10 +33,9 @@ O **TechQuiz** é uma aplicação web interativa de perguntas sobre o tema de **
 ## ✨ Funcionalidades
 
 - Página inicial com identidade visual própria e explicação de como jogar.
-- Seis questões em `perguntas.json`, com alternativas, resposta correta, explicação e fonte.
+- 16 questões em `perguntas.json`, com alternativas, resposta correta, explicação e fonte.
 - Feedback imediato, progresso, pontuação e reinício.
 - Layout responsivo, navegação por teclado, foco visível e anúncios de feedback para tecnologias assistivas.
-- Sem dependências externas, contas, coleta de dados ou serviços pagos.
 
 ---
 
@@ -62,8 +61,11 @@ Como o projeto realiza a leitura do arquivo `perguntas.json` via `fetch()`, é n
 
 ### Opção 2: Servidor Python
 No terminal, dentro da pasta raiz do projeto, execute:
- ```sh
+ ```
 python -m http.server 8000
 ```
 
-
+### Opção 3: Só acessar o link
+ ```
+https://nathan-gn-santos.github.io/ads-dfew-techquiz/
+```
