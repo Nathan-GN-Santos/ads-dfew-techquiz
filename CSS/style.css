@@ -35,6 +35,8 @@
   --toggle-track-bg: #b5f4c8;;
   --toggle-track-border: #b5f4c8;
   --toggle-knob-bg: #ffffff;
+
+  --brand-icon: #357451;
 }
 
 /* Modo Claro */
@@ -165,7 +167,7 @@ input:focus-visible,
 }
 
 .brand-icon span {
-  color: #357451;
+  color: var(--brand-icon);
 }
 
 .brand-label {
