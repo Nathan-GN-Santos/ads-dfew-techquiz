@@ -1,3 +1,4 @@
+
 [
   {
     "categoria": "Inteligência Artificial",
@@ -9,7 +10,7 @@
       "O modelo demora mais tempo para concluir o treinamento."
     ],
     "resposta": 2,
-    "explicacao": "O overfitting ocorre quando o modelo decora excessivamente os dados de treinamento (incluindo ruídos), falhando ao tentar prever dados novos e invisíveis.",
+    "explicacao": "O overfitting ocorre quando o modelo se ajusta excessivamente aos dados de treinamento, inclusive aos ruídos, prejudicando seu desempenho em dados novos.",
     "fonte": "https://www.ibm.com/think/topics/overfitting"
   },
   {
@@ -35,7 +36,7 @@
       "Um exige intervenção humana constante, enquanto o outro não utiliza dados."
     ],
     "resposta": 0,
-    "explicacao": "No aprendizado supervisionado, o modelo é treinado com dados que contêm a resposta correta (rótulos). No não supervisionado, o algoritmo explora dados não rotulados para encontrar estruturas ocultas.",
+    "explicacao": "No aprendizado supervisionado, o modelo é treinado com dados que contêm rótulos. No não supervisionado, o algoritmo explora dados não rotulados para encontrar estruturas, agrupamentos e relações.",
     "fonte": "https://www.ibm.com/think/topics/supervised-learning"
   },
   {
@@ -61,7 +62,7 @@
       "A utilização de processadores analógicos para cálculos."
     ],
     "resposta": 1,
-    "explicacao": "A arquitetura de transformadores revolucionou o processamento de linguagem natural e IA generativa graças ao mecanismo de atenção, que avalia a importância de diferentes partes de uma entrada de dados.",
+    "explicacao": "A arquitetura Transformer utiliza mecanismos de atenção para avaliar a importância de diferentes partes de uma sequência, permitindo identificar relações contextuais entre os dados.",
     "fonte": "https://www.ibm.com/think/topics/artificial-intelligence"
   },
   {
@@ -74,7 +75,7 @@
       "Criar elementos visuais para páginas e documentos."
     ],
     "resposta": 0,
-    "explicacao": "A visão computacional treina computadores para interpretar e compreender o mundo visual, utilizando imagens e vídeos para tarefas como reconhecimento facial e detecção de objetos.",
+    "explicacao": "A visão computacional permite que computadores interpretem informações visuais presentes em imagens e vídeos, realizando tarefas como reconhecimento de objetos e reconhecimento facial.",
     "fonte": "https://www.ibm.com/think/topics/computer-vision"
   },
   {
@@ -83,11 +84,11 @@
     "alternativas": [
       "Um método de classificação baseado em dados rotulados.",
       "Uma técnica para compactar arquivos automaticamente.",
-      "Um método em que um agente aprende por recompensas e penalidades.",
+      "Um método em que um agente aprende por recompensas e penalidades ao interagir com um ambiente.",
       "Um sistema que transforma documentos em formatos digitais."
     ],
     "resposta": 2,
-    "explicacao": "O aprendizado por reforço é um tipo de aprendizado de máquina em que um agente autônomo aprende a alcançar um objetivo complexo interagindo com um ambiente.",
+    "explicacao": "O aprendizado por reforço é um tipo de aprendizado de máquina em que um agente aprende a alcançar objetivos interagindo com um ambiente e recebendo recompensas ou penalidades conforme suas ações.",
     "fonte": "https://www.ibm.com/think/topics/artificial-intelligence"
   },
   {
@@ -120,13 +121,13 @@
     "categoria": "Inteligência Artificial",
     "pergunta": "Qual é o objetivo de uma função de ativação em uma rede neural artificial?",
     "alternativas": [
-      "Introduzir não-linearidade para aprender relações complexas.",
+      "Introduzir não-linearidade para permitir o aprendizado de relações complexas.",
       "Aumentar a capacidade de armazenamento do computador.",
       "Estabelecer conexões físicas com outros dispositivos.",
       "Converter instruções para linguagem de máquina."
     ],
     "resposta": 0,
-    "explicacao": "As funções de ativação determinam se o neurônio deve ser ativado ou não, inserindo não-linearidades essenciais para resolver problemas complexos.",
+    "explicacao": "As funções de ativação transformam os valores de saída dos neurônios e introduzem não-linearidade na rede, permitindo que ela aprenda padrões e relações complexas.",
     "fonte": "https://www.ibm.com/think/topics/neural-networks"
   },
   {
@@ -152,7 +153,59 @@
       "Modelos treinados com grandes volumes de texto para processar e gerar linguagem."
     ],
     "resposta": 3,
-    "explicacao": "Os LLMs utilizam redes neurais profundas para processar e gerar texto com base em contextos complexos de linguagem natural.",
+    "explicacao": "Os LLMs utilizam redes neurais profundas para processar e gerar texto com base em padrões aprendidos durante o treinamento.",
     "fonte": "https://www.ibm.com/think/topics/artificial-intelligence"
+  },
+  {
+    "categoria": "Segurança digital",
+    "pergunta": "O que é phishing?",
+    "alternativas": [
+      "Um tipo de manutenção de computadores.",
+      "Uma tentativa de enganar usuários para obter informações confidenciais.",
+      "Um programa para melhorar a velocidade da internet.",
+      "Um sistema de armazenamento em nuvem."
+    ],
+    "resposta": 1,
+    "explicacao": "Phishing é um tipo de ataque de engenharia social no qual criminosos se passam por pessoas ou organizações confiáveis para enganar usuários e obter informações sensíveis, como senhas e dados bancários.",
+    "fonte": "https://www.cisa.gov/sites/default/files/2023-10/Phishing%20Guidance%20-%20Stopping%20the%20Attack%20Cycle%20at%20Phase%20One_508c.pdf"
+  },
+  {
+    "categoria": "Banco de dados",
+    "pergunta": "Qual é a finalidade principal da linguagem SQL?",
+    "alternativas": [
+      "Criar animações em páginas web.",
+      "Desenvolver sistemas operacionais.",
+      "Consultar e manipular dados em bancos de dados relacionais.",
+      "Editar imagens digitais."
+    ],
+    "resposta": 2,
+    "explicacao": "SQL é uma linguagem utilizada para trabalhar com bancos de dados relacionais. Por meio dela, é possível criar tabelas, inserir, consultar, atualizar e excluir informações.",
+    "fonte": "https://www.postgresql.org/docs/current/sql.html"
+  },
+  {
+    "categoria": "Desenvolvimento web",
+    "pergunta": "Qual é a função do CSS no desenvolvimento de páginas web?",
+    "alternativas": [
+      "Definir a aparência e o estilo dos elementos da página.",
+      "Armazenar informações dos usuários.",
+      "Controlar diretamente o hardware do computador.",
+      "Gerenciar servidores de banco de dados."
+    ],
+    "resposta": 0,
+    "explicacao": "CSS é uma linguagem de folhas de estilo utilizada para controlar a apresentação visual das páginas web, permitindo definir cores, fontes, espaçamentos e layouts.",
+    "fonte": "https://developer.mozilla.org/pt-BR/docs/Web/CSS"
+  },
+  {
+    "categoria": "Inteligência Artificial",
+    "pergunta": "O que são redes neurais artificiais?",
+    "alternativas": [
+      "Componentes físicos utilizados para conectar computadores.",
+      "Sistemas utilizados exclusivamente para armazenar arquivos.",
+      "Linguagens de programação para criação de sites.",
+      "Modelos computacionais inspirados no funcionamento de redes de neurônios biológicos."
+    ],
+    "resposta": 3,
+    "explicacao": "Redes neurais artificiais são modelos computacionais inspirados no funcionamento dos neurônios biológicos. Elas possuem camadas de unidades conectadas que processam informações e aprendem padrões a partir de dados.",
+    "fonte": "https://www.ibm.com/think/topics/ai-vs-machine-learning-vs-deep-learning-vs-neural-networks"
   }
 ]
