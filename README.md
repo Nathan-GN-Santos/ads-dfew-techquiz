@@ -25,6 +25,10 @@ O **TechQuiz** é uma aplicação web interativa de perguntas sobre o tema de **
 ## 🔗 Links do Projeto
 * **Repositório oficial:** [TechQuiz](https://github.com/Nathan-GN-Santos/ads-dfew-techquiz)
 * **Site Publicado (Hospedado via GitHub Pages):** [Acesse o TechQuiz Online](https://nathan-gn-santos.github.io/ads-dfew-techquiz/)
+* **CSS:** https://github.com/Nathan-GN-Santos/ads-dfew-techquiz/blob/main/CSS/style.css
+* **Index:** https://github.com/Nathan-GN-Santos/ads-dfew-techquiz/blob/main/index.html
+* **JS:** https://github.com/Nathan-GN-Santos/ads-dfew-techquiz/blob/main/JS/script.js
+
 
 ---
 
