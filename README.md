@@ -59,13 +59,7 @@ Como o projeto realiza a leitura do arquivo `perguntas.json` via `fetch()`, é n
 2. Instale a extensão **Live Server**.
 3. Clique com o botão direito no arquivo `index.html` e selecione **Open with Live Server**.
 
-### Opção 2: Servidor Python
-No terminal, dentro da pasta raiz do projeto, execute:
- ```
-python -m http.server 8000
-```
-
-### Opção 3: Só acessar o link
+### Opção 2: Só acessar o link
  ```
 https://nathan-gn-santos.github.io/ads-dfew-techquiz/
 ```
